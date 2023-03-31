@@ -15,7 +15,7 @@ test ('5 dollars should be 532.926 yens', function () {
     const { fromDollarToYen } = require('./app.js')
     const yens = fromDollarToYen(5)
     const expected = 5 /1.2 * 127.9
-    expect(fromDollarToYen(5)).toBe(expected, 3);
+    expect(fromDollarToYen(5)).toBeCloseTo(expected, 3);
 })
 
 test ('500 yens should be 3.127 pounds', function () {
